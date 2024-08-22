@@ -15,7 +15,7 @@ import VentasEditar from './Routes/VentasEditar';
 
 function App() {
   
-  const params = useParams();
+  useParams();
 
   return (
     <BrowserRouter>

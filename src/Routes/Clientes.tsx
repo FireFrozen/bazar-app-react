@@ -72,7 +72,7 @@ const Clientes = () => {
     }
 
     //Lista de clientes
-    const clientList = clientes.map((client: any)=>
+    const clientList = clientes.map((client: any, id_cliente: any)=>
         <div className='card-client' key={client.id_cliente}>
             <p className='card-client-title'>Cliente N° {client.id_cliente}</p>
 
