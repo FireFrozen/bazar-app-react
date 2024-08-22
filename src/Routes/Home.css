@@ -1,0 +1,43 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 20px;
+}
+.btn-panel{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+}
+
+.btn-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgb(1,116,172);
+    background: linear-gradient(90deg, rgba(1,116,172,1) 35%, rgba(30,146,190,1) 100%);
+    color:white;
+
+    width: 300px;
+    height: 80px;
+    border-radius: 40px;
+
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+
+    box-sizing: border-box;
+    border:none ;
+}
+
+.btn-home:hover{
+    background: rgb(45, 152, 206);
+    background: linear-gradient(90deg, rgb(45, 152, 206, 1) 35%,rgb(76, 162, 196) 100%);
+    border: 2px solid ;
+    border-color: white;
+}

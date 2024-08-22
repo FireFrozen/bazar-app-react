@@ -1,0 +1,41 @@
+.table-productos-venta{
+    border: 0px solid white;
+    border-collapse: collapse;
+
+    margin-top: 10px;
+
+}
+
+th {
+    background-color: rgb(39, 93, 95);
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+tr{
+    background-color: rgb(76, 119, 120)
+
+}
+
+td{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.row-total{
+    font-weight: bolder;
+}
+
+.btn-delete-row{
+    background-color: brown;
+    border: 1px solid gray;
+    border-radius: 2px;
+    height: 21.2px;
+    width: 62px;
+}
+
+.btn-delete-row:hover{
+    background-color: rgb(196, 81, 81);
+    border: 1px solid rgb(255, 255, 255);
+}

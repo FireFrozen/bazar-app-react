@@ -1,0 +1,98 @@
+.Productos{
+    width: 80vw;
+    min-height: 80vh;
+}
+
+/*Botones de lista de productos*/
+.btn-lista-productos-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.btn-lista-productos-container button{
+    min-height: 30px;
+}
+
+
+
+/*Cards de Productos*/
+.cards-product-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+
+    border: 1px solid rgb(0, 128, 124);
+    margin-top: 20px;
+}
+
+.card-product{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 5px;
+    box-sizing: border-box;
+    border: 2px solid rgb(0, 128, 124);
+    border-radius: 10px;
+    background-color: rgb(29, 44, 47);
+
+    width: 260px;
+    height: 240px;
+    padding: 10px;
+    position: relative;
+}
+.card-product-title{
+    font-size: 20px;
+    align-self: center;
+    font-weight: bold;
+}
+.card-product p{
+    margin: 0;
+    text-align: left;
+}
+
+.card-product-btns{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+
+    align-self: center;
+
+    width: 80%;
+
+    position: absolute;
+    bottom: 10px;
+    
+}
+
+.btn-agregar-producto{
+    border: 1px solid gray;
+    border-radius: 30px;
+    background-color: rgb(23, 60, 50);
+    width: 160px;
+    height: 60px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+
+    font-size: 16px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.btn-agregar-producto:hover{
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(50, 100, 87);
+}

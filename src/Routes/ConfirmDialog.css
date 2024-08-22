@@ -1,0 +1,59 @@
+.confirm-dialog-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.confirm-dialog {
+    background-color: rgb(45, 82, 79);
+
+    width: 280px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.confirm-dialog-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-editar{
+    background-color: #404040;
+    border: 1px solid gray;
+    border-radius: 2px;
+    height: 21.2px;
+    width: 62px;
+}
+
+.btn-editar:hover{
+    background-color: #908c8c;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.btn-delete{
+    background-color: brown;
+    border: 1px solid gray;
+    border-radius: 2px;
+    height: 21.2px;
+    width: 62px;
+}
+.btn-delete:hover{
+    background-color: rgb(196, 81, 81);
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.btn-ConfirmDialog{
+    height: 30px;
+    width: 80px;
+}
