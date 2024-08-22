@@ -17,7 +17,7 @@ const Productos = () => {
   //Funcion obtener productos
   function getProducts() {
     
-      let peticion =  axios.get(baseURL+"/productos").then((response) => {
+      axios.get(baseURL+"/productos").then((response) => {
           setProductos(response.data);
           console.log(response);
           //console.log("hola");
@@ -31,7 +31,7 @@ const Productos = () => {
 
   function getProductsSinStock() {
     
-    let peticion =  axios.get(baseURL+"/productos/falta_stock").then((response) => {
+    axios.get(baseURL+"/productos/falta_stock").then((response) => {
         setProductos(response.data);
         console.log(response);
         //console.log("hola");
@@ -79,7 +79,7 @@ const Productos = () => {
   } 
 
     //Lista de Productos
-    const productList = productos.map((product: any, codigo_producto:any)=>
+    const productList = productos.map((product: any)=>
       <div className='card-product' key={product.codigo_producto}>
           <p className='card-product-title'>Producto N° {product.codigo_producto}</p>
 

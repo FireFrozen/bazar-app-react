@@ -18,7 +18,7 @@ const Ventas = () => {
   //Funcion obtener ventas
   function getVentas() {
     
-      let peticion =  axios.get(baseURL+"/ventas").then((response) => {
+      axios.get(baseURL+"/ventas").then((response) => {
         setVentas(response.data);
           console.log(response);
           //console.log("hola");
@@ -32,7 +32,7 @@ const Ventas = () => {
   //Obtener resumen de las ventas del día
   function getResumenVentasDelDia(dia:String) {
     
-    let peticion =  axios.get(baseURL+"/ventas/dia/"+dia).then((response) => {
+    axios.get(baseURL+"/ventas/dia/"+dia).then((response) => {
         alert(response.data);
         console.log(response);
     }).catch(e => console.log(e));
@@ -80,7 +80,7 @@ const Ventas = () => {
   
   
       //Lista de Productos
-      const ventasList = ventas.map((venta: any, codigo_venta:any)=>
+      const ventasList = ventas.map((venta: any)=>
         <div className='card-product' key={venta.codigo_producto}>
             <p className='card-product-title'>Venta N° {venta.codigo_venta}</p>
   

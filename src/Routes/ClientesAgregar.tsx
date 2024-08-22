@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import "./Clientes.css"
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';

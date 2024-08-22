@@ -8,7 +8,6 @@ const ProductosEditar = () => {
 
     const {id} = useParams<{ id: string }>();
 
-    const [producto, setProducto] = useState(null);
 
     const [name, setName] = useState("");
     const [marca, setMarca] = useState("");
@@ -17,7 +16,7 @@ const ProductosEditar = () => {
 
     useEffect(() => {
         axios.get(`${baseURL}/productos/${id}`).then((response) => {
-            setProducto(response.data);
+            
             setName(response.data.nombre);
             setMarca(response.data.marca);
             setCosto(response.data.costo);

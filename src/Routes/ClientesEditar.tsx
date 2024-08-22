@@ -9,7 +9,7 @@ const ClientesEditar = () => {
 
     const {id} = useParams<{ id: string }>();
 
-    const [cliente, setCliente] = useState(null);
+
 
     const [name, setName] = useState("");
     const [apellido, setApellido] = useState("");
@@ -17,7 +17,7 @@ const ClientesEditar = () => {
 
     useEffect(() => {
         axios.get(`${baseURL}/clientes/${id}`).then((response) => {
-            setCliente(response.data);
+ 
             setName(response.data.nombre);
             setApellido(response.data.apellido);
             setDNI(response.data.dni);

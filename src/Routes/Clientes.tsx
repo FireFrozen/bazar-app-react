@@ -18,7 +18,7 @@ const Clientes = () => {
 
     //Funcion obtener clientes
     function getClients() {
-        let peticion =  axios.get(baseURL+"/clientes").then((response) => {
+        axios.get(baseURL+"/clientes").then((response) => {
             setClientes(response.data);
             console.log(response);
             console.log("hola");
@@ -72,7 +72,7 @@ const Clientes = () => {
     }
 
     //Lista de clientes
-    const clientList = clientes.map((client: any, id_cliente:any)=>
+    const clientList = clientes.map((client: any)=>
         <div className='card-client' key={client.id_cliente}>
             <p className='card-client-title'>Cliente N° {client.id_cliente}</p>
 
