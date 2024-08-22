@@ -1,9 +1,9 @@
 import axios from 'axios';
-import React, { useMemo, useState } from 'react'
+import { useState } from 'react'
 import { FaArrowLeftLong } from 'react-icons/fa6'
 import { IoBagAdd } from 'react-icons/io5';
 import { Link, useNavigate } from 'react-router-dom'
-import { useTable } from "react-table";
+
 import "./TablaProductos.css"
 
 const VentasAgregar = () => {

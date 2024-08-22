@@ -1,8 +1,7 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./Clientes.css"
 import { Link } from 'react-router-dom';
-import BtnVolver from '../Components/BtnVolver';
 import { FaArrowLeftLong } from 'react-icons/fa6';
 import { MdPersonAddAlt1 } from "react-icons/md";
 import "./ConfirmDialog.css"
