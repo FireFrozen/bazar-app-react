@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
-import { FaArrowLeftLong } from 'react-icons/fa6';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import "./Clientes.css"
+import BtnVolver from '../Components/BtnVolver';
 
 const ClientesEditar = () => {
-    const baseURL = import.meta.env.VITE_URL_API;
+    const baseURL = import.meta.env.VITE_URL_API || "http://localhost:8080";
 
     const {id} = useParams<{ id: string }>();
 
@@ -57,14 +57,7 @@ const ClientesEditar = () => {
     <div>
         <h1>Editar Cliente</h1>
 
-        <div className='btn-Volver'>
-            <Link to="/clientes" >               
-                <button>
-                    <FaArrowLeftLong />
-                    Volver
-                </button>
-            </Link>
-        </div>
+        <BtnVolver ruta = "/clientes"/>
 
         <form className='form-agregar-client' onSubmit={editClient}>
             <div className='form-agregar-field'>

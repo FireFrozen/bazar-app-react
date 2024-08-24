@@ -1,11 +1,13 @@
 
+import { FaArrowLeftLong } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 
-const BtnVolver = (ruta : any) => {
+const BtnVolver = (props : any) => {
   return (
-    <div>
-        <Link to={ruta} >
+    <div className='btn-Volver'>
+        <Link to={props.ruta} >
             <button>
+                <FaArrowLeftLong />
                 Volver
             </button>
         </Link>

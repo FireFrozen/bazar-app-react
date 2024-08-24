@@ -2,14 +2,14 @@ import axios from 'axios';
 import { useEffect, useState } from 'react'
 import "./Clientes.css"
 import { Link } from 'react-router-dom';
-import { FaArrowLeftLong } from 'react-icons/fa6';
 import { MdPersonAddAlt1 } from "react-icons/md";
 import "./ConfirmDialog.css"
 import "./FormularioAgregar.css"
+import BtnVolver from '../Components/BtnVolver';
 
 
 const Clientes = () => {
-    const baseURL = import.meta.env.VITE_URL_API;
+    const baseURL = import.meta.env.VITE_URL_API || "http://localhost:8080";
 
     const [clientes, setClientes] = useState([]);
     
@@ -114,14 +114,7 @@ const Clientes = () => {
         
         <h1>Clientes</h1>
 
-        <div className='btn-Volver'>
-            <Link to="/" >
-                <button>
-                    <FaArrowLeftLong />
-                    Volver
-                </button>
-            </Link>
-        </div>
+        <BtnVolver ruta="/"/>
         
         <Link to="/clientes/agregar">
                 <button className='btn-agregar'>

@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import "./Clientes.css"
 import axios from 'axios';
-import { Link, useNavigate } from 'react-router-dom';
-import { FaArrowLeftLong } from "react-icons/fa6";
+import { useNavigate } from 'react-router-dom';
+import BtnVolver from '../Components/BtnVolver';
 
 const ClientesAgregar = () => {
-    const baseURL = import.meta.env.VITE_URL_API;
+    const baseURL = import.meta.env.VITE_URL_API || "http://localhost:8080";
 
     const [name, setName] = useState("");
     const [apellido, setApellido] = useState("");
@@ -36,14 +36,7 @@ const ClientesAgregar = () => {
     <div>
         <h1>Agregar Cliente</h1>
 
-        <div className='btn-Volver'>
-            <Link to="/clientes" >               
-                <button>
-                    <FaArrowLeftLong />
-                    Volver
-                </button>
-            </Link>
-        </div>
+        <BtnVolver ruta = "/clientes"/>
 
         <form className='form-agregar-client' onSubmit={createClient}>
             <div className='form-agregar-field'>

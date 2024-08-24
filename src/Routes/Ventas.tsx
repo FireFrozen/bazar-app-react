@@ -1,12 +1,12 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { FaArrowLeftLong } from 'react-icons/fa6'
 import { IoBagAdd } from 'react-icons/io5'
 import { Link } from 'react-router-dom'
+import BtnVolver from '../Components/BtnVolver'
 
 const Ventas = () => {
 
-  const baseURL = import.meta.env.VITE_URL_API;
+  const baseURL = import.meta.env.VITE_URL_API || "http://localhost:8080";
 
   const [ventas, setVentas] = useState([]);
 
@@ -123,14 +123,7 @@ return(
         
         <h1>Ventas</h1>
 
-        <div className='btn-Volver'>
-            <Link to="/" >
-                <button>
-                    <FaArrowLeftLong />
-                    Volver
-                </button>
-            </Link>
-        </div>
+        <BtnVolver ruta = "/"/>
 
         <div>
           <label htmlFor="">Buscar por día: </label>

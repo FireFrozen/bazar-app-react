@@ -1,13 +1,13 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
-import { FaArrowLeftLong } from 'react-icons/fa6';
 import { IoBagAdd } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import "./Productos.css"
+import BtnVolver from '../Components/BtnVolver';
 
 const Productos = () => {
 
-  const baseURL = import.meta.env.VITE_URL_API;
+  const baseURL = import.meta.env.VITE_URL_API || "http://localhost:8080";
 
   const [productos, setProductos] = useState([]);
   
@@ -123,14 +123,7 @@ const Productos = () => {
         
         <h1>Productos</h1>
 
-        <div className='btn-Volver'>
-            <Link to="/" >
-                <button>
-                    <FaArrowLeftLong />
-                    Volver
-                </button>
-            </Link>
-        </div>
+        <BtnVolver ruta = "/"/>
 
         <div className='btn-lista-productos-container'>
           {/* Mostrara productos con stock <= a 5 */}

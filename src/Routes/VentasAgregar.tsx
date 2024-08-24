@@ -1,14 +1,14 @@
 import axios from 'axios';
 import { useState } from 'react'
-import { FaArrowLeftLong } from 'react-icons/fa6'
 import { IoBagAdd } from 'react-icons/io5';
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import "./TablaProductos.css"
+import BtnVolver from '../Components/BtnVolver';
 
 const VentasAgregar = () => {
 
-  const baseURL = import.meta.env.VITE_URL_API;
+  const baseURL = import.meta.env.VITE_URL_API || "http://localhost:8080";
 
   const [fecha, setFecha] = useState("");
   const [cliente, setCliente] = useState({id_cliente:"0"});
@@ -98,14 +98,7 @@ const VentasAgregar = () => {
     <div>
         <h1>Agregar Venta</h1>
 
-        <div className='btn-Volver'>
-            <Link to="/ventas" >               
-                <button>
-                    <FaArrowLeftLong />
-                    Volver
-                </button>
-            </Link>
-        </div>
+        <BtnVolver ruta = "/ventas"/>
 
         <form className='form-agregar-client' onSubmit={createVenta}>
             <div className='form-agregar-field'>

@@ -1,10 +1,10 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react'
-import { FaArrowLeftLong } from 'react-icons/fa6'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import BtnVolver from '../Components/BtnVolver';
 
 const ProductosEditar = () => {
-    const baseURL = import.meta.env.VITE_URL_API;
+    const baseURL = import.meta.env.VITE_URL_API || "http://localhost:8080";
 
     const {id} = useParams<{ id: string }>();
 
@@ -57,14 +57,7 @@ const ProductosEditar = () => {
     <div>
         <h1>Agregar Producto</h1>
 
-        <div className='btn-Volver'>
-            <Link to="/productos" >               
-                <button>
-                    <FaArrowLeftLong />
-                    Volver
-                </button>
-            </Link>
-        </div>
+        <BtnVolver ruta = "/productos"/>
 
         <form className='form-agregar' onSubmit={EditProduct}>
             <div className='form-agregar-field'>
